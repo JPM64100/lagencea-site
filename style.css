@@ -37,6 +37,7 @@ p.lead{font-size:clamp(18px,2vw,22px);max-width:640px;color:#333}
 .proj{text-decoration:none}
 .proj .ph{aspect-ratio:16/10;background:#ddd center/cover;overflow:hidden}
 .proj .ph.contain{background-color:#fff;background-size:contain;background-repeat:no-repeat}
+.proj .ph video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
 .proj .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .proj:hover .ph img{transform:scale(1.04)}
 .proj .meta{display:flex;justify-content:space-between;gap:12px;margin-top:14px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
