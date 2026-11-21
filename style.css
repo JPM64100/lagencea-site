@@ -35,7 +35,7 @@ p.lead{font-size:clamp(18px,2vw,22px);max-width:640px;color:#333}
 .skill small{display:block;color:var(--grey);margin-top:12px;font-size:14px}
 .work{display:grid;grid-template-columns:repeat(2,1fr);gap:34px;margin-top:48px}
 .proj{text-decoration:none}
-.proj .ph{aspect-ratio:16/10;background:#ddd center/cover;overflow:hidden}
+.proj .ph{aspect-ratio:16/9;background:#ddd center/cover;overflow:hidden}
 .proj .ph.contain{background-color:#fff;background-size:contain;background-repeat:no-repeat}
 .proj .ph video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
 .proj .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
@@ -72,3 +72,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 @media(max-width:860px){section{padding:76px 0}.grid3,.skills,.work,.reel,.steps,.about,.why,.contact-grid{grid-template-columns:1fr}.logos{grid-template-columns:repeat(2,1fr)}nav a{margin-left:14px;font-size:13px}.btn.ghost{margin:12px 0 0}}
 .logos img[alt="French Albion"],.logos img[alt="Sauveteur Aquatique"]{max-height:86px}
 @media(max-width:860px){nav a:nth-child(2),nav a:nth-child(3),nav a:nth-child(4){display:none}}
+
+.proj .ph{position:relative}
+.slider{display:flex;width:100%;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.slider::-webkit-scrollbar{display:none}
+.slider img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:start;transition:none}
+.proj:hover .slider img{transform:none}
+.sl{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border:0;border-radius:50%;background:rgba(255,255,255,.85);font-size:24px;line-height:1;cursor:pointer;color:#111}
+.sl.prev{left:10px}.sl.next{right:10px}
+
+.proj h3 a{color:inherit;text-decoration:none}
+.proj h3 a:hover{text-decoration:underline}
+.proj .go{font-weight:400;opacity:.5;margin-left:4px}
+.proj:hover h3 .go{opacity:1}
